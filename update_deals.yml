@@ -1,0 +1,33 @@
+
+name: Update Loot Deals
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"  # every 3 hours
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run Deal Scraper
+        run: python deal_scraper.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add index.html
+          git commit -m "Auto-update loot deals" || echo "No changes to commit"
+          git push
