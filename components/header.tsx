@@ -4,15 +4,15 @@ import { Menu, Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { UserMenu } from "@/components/auth/user-menu"
 import { SmartSearchBar } from "@/components/search/smart-search-bar"
-import { useState, useRef } from "react"
+import { useState } from "react"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const searchHandlerRef = useRef<((query: string) => void) | null>(null)
 
   const handleSearchChange = (query: string) => {
-    if (searchHandlerRef.current) {
-      searchHandlerRef.current(query)
+    // Find the deals section and trigger search
+    if (typeof window !== "undefined" && (window as any).searchDeals) {
+      ;(window as any).searchDeals(query)
     }
   }
 

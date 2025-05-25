@@ -39,6 +39,33 @@ const categories = [
     bgColor: "bg-orange-50",
     deals: "1.2K+ deals",
   },
+  {
+    id: "electronics",
+    name: "Electronics",
+    icon: Smartphone,
+    description: "Home appliances & electronics",
+    color: "from-red-500 to-pink-500",
+    bgColor: "bg-red-50",
+    deals: "2.8K+ deals",
+  },
+  {
+    id: "accessories",
+    name: "Accessories",
+    icon: Shirt,
+    description: "Watches, bags, wallets & more",
+    color: "from-yellow-500 to-orange-500",
+    bgColor: "bg-yellow-50",
+    deals: "1.5K+ deals",
+  },
+  {
+    id: "home",
+    name: "Home & Living",
+    icon: Scissors,
+    description: "Home essentials & decor",
+    color: "from-teal-500 to-cyan-500",
+    bgColor: "bg-teal-50",
+    deals: "2.1K+ deals",
+  },
 ]
 
 export function Categories() {

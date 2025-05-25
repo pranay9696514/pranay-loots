@@ -24,26 +24,51 @@ interface AdvancedFiltersProps {
 }
 
 const availableBrands = [
+  // Fashion
   "Allen Solly",
   "Van Heusen",
   "Peter England",
   "Arrow",
   "Wrangler",
   "Jack & Jones",
+  // Footwear
   "Red Tape",
   "Woodland",
   "Bata",
   "Campus",
+  "Puma",
+  // Tech
   "boAt",
   "Noise",
   "Mi",
   "Realme",
   "JBL",
+  // Grooming
   "Beardo",
   "The Man Company",
   "Philips",
   "Ustraa",
   "Gillette",
+  // Electronics
+  "Samsung",
+  "LG",
+  "Whirlpool",
+  "Bajaj",
+  "Crompton",
+  "Prestige",
+  // Accessories
+  "Fossil",
+  "Ray-Ban",
+  "Wildcraft",
+  "Tommy Hilfiger",
+  "Fastrack",
+  "Skybags",
+  // Home
+  "Cello",
+  "Amazon Basics",
+  "Milton",
+  "Solimo",
+  "Pigeon",
 ]
 
 const availablePlatforms = [
